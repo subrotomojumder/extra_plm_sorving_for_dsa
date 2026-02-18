@@ -17,14 +17,17 @@ int main()
         int coins = 0;
         for (int i = 0; i < n; i++)
         {
-            if ((a[i] * x) < y)
-            {
-                coins += a[i] * x;
-            }
-            else
-            {
-                coins += y;
-            }
+            int opt1 = a[i] * x;
+            int opt2 = y;
+            coins += min(opt1, opt2);
+            // if ((a[i] * x) < y)
+            // {
+            //     coins += a[i] * x;
+            // }
+            // else
+            // {
+            //     coins += y;
+            // }
         }
         cout << coins << endl;
     }
